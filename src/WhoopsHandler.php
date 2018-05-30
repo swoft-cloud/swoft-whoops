@@ -14,10 +14,8 @@ class WhoopsHandler
         if (empty($this->_whoops)) {
             $this->whoops = new Run();
         }
+
         return $this->whoops;
     }
-
-
-
 
 }
