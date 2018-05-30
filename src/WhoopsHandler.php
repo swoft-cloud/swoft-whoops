@@ -17,4 +17,7 @@ class WhoopsHandler
         return $this->whoops;
     }
 
+
+
+
 }
