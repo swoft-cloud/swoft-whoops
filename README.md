@@ -12,6 +12,24 @@ composer require --dev swoft/whoops
 
 ## Usage
 
+- Method 1
+
+Use the `Swoft\Whoops\WhoopsMiddleware` as an global middleware(`app/bean.php`):
+
+```php
+    'httpDispatcher'   => [
+        // Add global http middleware
+        'middlewares' => [
+            // Notice: Please add to the first place
+            \Swoft\Whoops\WhoopsMiddleware::class,
+        ],
+    ],
+```
+
+- Method 2
+
+Change the `App\Exception\Handler\HttpExceptionHandler` class:
+
 ```php
 <?php declare(strict_types=1);
 
